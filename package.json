@@ -18,6 +18,8 @@
     "electron-builder": "^24.13.3"
   },
   "dependencies": {
+    "@cliqz/adblocker-electron": "^1.33.2",
+    "cross-fetch": "^4.0.0",
     "electron-store": "^10.0.0"
   },
   "build": {
@@ -26,11 +28,17 @@
     "mac": {
       "category": "public.app-category.developer-tools",
       "icon": "assets/appicon/icon.icns",
-      "target": ["dmg", "zip"]
+      "target": [
+        "dmg",
+        "zip"
+      ]
     },
     "win": {
       "icon": "assets/appicon/icon.ico",
-      "target": ["nsis", "portable"]
+      "target": [
+        "nsis",
+        "portable"
+      ]
     },
     "directories": {
       "output": "dist"

@@ -2,11 +2,12 @@ const { ipcRenderer, shell } = require('electron');
 const path = require('path');
 
 const apps = [
-    { name: 'Dofensive', icon: 'FaviconDofensive.png', url: 'https://dofensive.com/fr' },
-    { name: 'Dofus-Portal', icon: 'faviconDofPort.ico', url: 'https://dofus-portals.fr' },
     { name: 'DofusDB', icon: 'FaviconDB.png', url: 'https://dofusdb.fr/fr/tools/treasure-hunt' },
-    { name: 'DofusPlanet', icon: 'FaviconDP.png', url: 'https://dofusplanet.fr/' },
+    { name: 'Dofus-Portal', icon: 'faviconDofPort.ico', url: 'https://dofus-portals.fr' },
+    { name: 'Brifus', icon: 'FaviconBrifus.png', url: 'https://brifus.fr/brisage' },
     { name: 'DofusBook', icon: 'faviconDofBook.ico', url: 'https://dofusbook.net/' },
+    { name: 'DofusPlanet', icon: 'FaviconDP.png', url: 'https://dofusplanet.fr/' },
+    { name: 'Dofensive', icon: 'FaviconDofensive.png', url: 'https://dofensive.com/fr' },
     { name: 'Dofus pour les noobs', icon: 'FaviconDPLN.ico', url: 'https://www.dofuspourlesnoobs.com/' },
     { name: 'Dofus-Metamob', icon: 'FaviconMetaMob.png', url: 'https://metamob.fr/' },
     { name: 'Hall-des-douzes', icon: 'FaviconHDD.png', url: 'https://www.halles-des-douze.fr/' },
