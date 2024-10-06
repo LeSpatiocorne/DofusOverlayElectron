@@ -5,8 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder",
-    "electron-builder": "electron-builder"
+    "build": "electron-builder --win --mac",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
   },
   "keywords": [],
   "author": "",
@@ -24,13 +25,15 @@
     "productName": "DofusOverlay",
     "mac": {
       "category": "public.app-category.developer-tools",
-      "icon": "chemin/vers/votre/icone.icns"
+      "icon": "assets/appicon/icon.icns",
+      "target": ["dmg", "zip"]
     },
     "win": {
-      "icon": "assets/appicon/icon.ico"
+      "icon": "assets/appicon/icon.ico",
+      "target": ["nsis", "portable"]
     },
-    "linux": {
-      "icon": "assets/appicon/icon.png"
+    "directories": {
+      "output": "dist"
     }
   }
 }
