@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dofus Overlay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="custom-titlebar">
+        <div id="titlebar-text">Dofus Overlay by <a href="#" id="spatiocorne-link">@LeSpatiocorne</a></div>
+        <div id="window-controls">
+            <button id="pin-button" title="Épingler la fenêtre"><span id="pin-icon">🖈</span></button>
+            <button id="min-button">-</button>
+            <button id="max-button">□</button>
+            <button id="close-button">×</button>
+        </div>
+    </div>
+    <div id="app">
+        <div id="toolbar">
+            <!-- Les boutons seront ajoutés ici par JavaScript -->
+        </div>
+        <div id="content">
+            <div id="tabs"></div>
+            <div id="webviews"></div>
+            <div id="default-background"></div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "dofusoverlay",
+  "version": "1.0.0",
+  "description": "Simple overlay for Dofus, using Electron and community websites",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "electron-builder": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dmg-builder": "^24.13.3",
+    "electron": "^32.1.2",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-store": "^10.0.0"
+  },
+  "build": {
+    "appId": "com.lespatiocorne.dofusoverlay",
+    "productName": "DofusOverlay",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "chemin/vers/votre/icone.icns"
+    },
+    "win": {
+      "icon": "assets/appicon/icon.ico"
+    },
+    "linux": {
+      "icon": "assets/appicon/icon.png"
+    }
+  }
+}

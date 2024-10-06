@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('../fonts/DejaVuSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('../fonts/DejaVuSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'DejaVu Sans', sans-serif;
+}
+
+#app {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #424242;
+    width: 80px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.app-button {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    background-color: rgb(199, 199, 199);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-button:hover {
+    background-color: #e0e0e0;
+}
+
+.app-icon {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block; /* Ajout de cette ligne */
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#tabs {
+    display: flex;
+    background-color: #b6b6b6;
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-right: 1px solid #888888;
+    position: relative;
+}
+
+.tab.active {
+    background-color: #cacaca;
+}
+
+.close-tab {
+    margin-left: 10px;
+    color: #999;
+}
+
+.close-tab:hover {
+    color: #333;
+}
+
+#webviews {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.webview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: white;
+}
+
+.webview.active {
+    display: flex;
+}
+
+#custom-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    -webkit-app-region: drag;
+    padding: 0 10px;
+}
+
+#titlebar-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#window-controls {
+    display: flex;
+    -webkit-app-region: no-drag;
+}
+
+#window-controls button {
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#window-controls button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+#close-button:hover {
+    background-color: #e81123 !important;
+}
+
+#app-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.app-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.app-icon:hover {
+    opacity: 0.8;
+}
+
+#url-input {
+    flex-grow: 1;
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#default-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+#welcome-message {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#author-link {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#author-link:hover {
+    color: #2a70c2;
+    text-decoration: underline;
+}
+
+.spatio-button {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+#spatiocorne-link {
+    color: #4a90e2;
+    text-decoration: none;
+    -webkit-app-region: no-drag;
+}
+
+#spatiocorne-link:hover {
+    text-decoration: underline;
+}
+
+#pin-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pin-icon {
+    font-size: 16px;
+}
+
+#pin-button.active #pin-icon {
+    color: #4a90e2;
+}
